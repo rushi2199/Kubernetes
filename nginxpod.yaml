@@ -4,6 +4,7 @@ metadata:
   name: mynginxpod
   labels:
     app: my-app
+    env: my-env
 
 spec:
   containers:
@@ -12,3 +13,6 @@ spec:
       ports:
         - containerPort: 80
           hostPort: 80
+  nodeSelector:
+    gpu: "true"
+

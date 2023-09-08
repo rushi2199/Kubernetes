@@ -14,4 +14,10 @@ spec:
           name: nginxcontainer
           ports:
             - containerPort: 80
- 
+          
+          livenessProbe:
+            httpGet:
+              path: /index.html
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10

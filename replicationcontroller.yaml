@@ -7,7 +7,7 @@ spec:
  template:
    metadata:
      labels:
-       app: development
+       app: dev
    spec:
      containers:
         - image: nginx
@@ -15,9 +15,4 @@ spec:
           ports:
             - containerPort: 80
           
-          livenessProbe:
-            httpGet:
-              path: /index.html
-              port: 80
-            initialDelaySeconds: 10
-            periodSeconds: 10
+        
